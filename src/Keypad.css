@@ -1,0 +1,128 @@
+.keypad-container{
+    width:375px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 20px;
+}
+
+h4{
+    margin-bottom: 100px;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: 100;
+    color:#707070
+}
+
+#message{
+    position: absolute;
+    top:-40px;
+    font-size: 10px;
+    color:#F57E7E
+}
+
+.input-container{
+    height:50px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+input{
+    width:100%;
+    height: 100%;
+    justify-content: center;
+    padding:0;
+    outline: none;
+    text-align: center;
+    margin:0;
+    font-size: 20px;
+    border:1px solid #DCDCDC;
+
+    border-radius:5px;
+
+}
+
+ul{
+    padding:0;
+    list-style: none;
+    display: flex;
+    margin:auto;
+    width:375px;
+    flex-wrap: wrap;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing:border-box;
+
+}
+
+li{
+    box-sizing: border-box;
+
+    display: block;
+    text-align: center;
+    width:25%;
+    border:3px solid #EFEFEF;
+    padding:5px 0px;
+    border-radius: 7px;
+    background-color:rgba(255, 255, 255, 1);
+    cursor: pointer;
+    font-size: 25px;
+}
+
+#focus{
+    background-color:#9CD0C9
+}
+
+li.empty{
+    background-color: #E9E9E9;
+    cursor: auto;
+}
+
+
+.button-container{
+    justify-content: center,
+
+}
+
+.button-container button{
+    padding:20px 0px;
+    margin-top:10px;
+    border:none;
+    border-radius: 5px;
+    font-size: 20px;
+    color:#FFFFFF
+}
+
+.button-container button:first-child{
+    width:80%;
+    background-color: #76C2B7;
+}
+
+.button-container button:first-child:focus{
+    background-color: #429781;
+}
+
+.button-container button:last-child{
+    width:20%;
+    margin-left: 10px;
+    background-color: #F2B6B6
+}
+
+
+.button-container button:last-child:focus{
+ 
+    background-color: #F57E7E
+}
+#login-alert{
+    width: 100%;
+    position: absolute;
+    left:0;
+    right:0;
+    background-color:#009681;
+    display: flex;
+    color:rgba(255,255,255,0.8);
+    justify-content: center;
+
+}
+#login-alert h5{
+    padding:0
+}
