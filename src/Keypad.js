@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import "./Keypad.css";
+import view from "./img/view.png"
+import hide from "./img/hide.png"
+
+import { CSSTransition } from "react-transition-group";
 
 class Keypad extends Component {
   state = {
@@ -25,12 +29,10 @@ class Keypad extends Component {
     focus: null,
     inputfield: "",
     loggedIn: false,
-    inputMessage: false
+    inputMessage: false,
+    showInput: false
   };
 
-  login = () => {
-    alert("You logged in");
-  };
   startShuffle = value => {
     const shuffled = this.state.currentNumbers
       .map(a => ({ sort: Math.random(), value: a }))
@@ -42,7 +44,63 @@ class Keypad extends Component {
     });
   };
 
+  setTimeout = (value, time) => {
+    window.setTimeout(() => this.setState({ [value]: false }), time);
+  };
+
+  setErrorMessage = inputfieldLength => {
+    if (inputfieldLength === 6) {
+      this.setState({ inputMessage: true });
+      this.setTimeout("inputMessage", 4000);
+    }
+  };
+
+  login = () => {
+    const { inputfield } = this.state;
+    if (inputfield.length > 0)
+      this.setState(state => ({
+        loggedIn: true,
+        focus: null,
+        inputfield: "",
+        showInput: false
+      }));
+    this.setTimeout("loggedIn", 2000);
+  };
+
+  removeNumber = () => {
+    const { inputfield } = this.state;
+    const newInputValue = inputfield.length - 1;
+    this.setState(state => ({
+      inputfield: inputfield.substring(0, inputfield.length - 1),
+      focus: null,
+      inputMessage: newInputValue < 6 ? false : true,
+      showInput: false
+    }));
+  };
+  keyPress = e => {
+    const { inputfield, currentNumbers } = this.state;
+    currentNumbers.forEach((item, i) => {
+      if (Number(e.key) === Number(item) && inputfield.length < 6) {
+        this.setState(state => ({
+          focus: i,
+          inputfield: inputfield + e.key
+        }));
+      }
+      this.setErrorMessage(inputfield.length);
+    });
+
+    if (e.key === "Enter") {
+      this.login();
+    }
+    if (e.key === "Backspace") {
+      this.removeNumber();
+    }
+  };
+
   componentDidMount() {
+    window.addEventListener("keydown", e => this.keyPress(e));
+    window.addEventListener("keyup", e => this.setState({ focus: null }));
+
     this.startShuffle();
   }
   render() {
@@ -51,23 +109,49 @@ class Keypad extends Component {
       focus,
       inputfield,
       loggedIn,
-      inputMessage
+      inputMessage,
+      showInput
     } = this.state;
+
     return (
       <div className="keypad-container">
-        {loggedIn && (
-          <div id="login-alert">
-            <h5>You logged in!</h5>
-          </div>
-        )}
+        <CSSTransition
+          in={loggedIn}
+          timeout={200}
+          classNames="login-alert"
+          onEntered={() => console.log("hej")}
+        >
+            <div className="login-alert">
+              <h5>You logged in!</h5>
+              {/* <p>hej</p> */}
+            </div>
+        </CSSTransition>
 
         <h4>Logga in med personlig kod</h4>
-       
+
         <div className="input-container">
-        {inputMessage && (
-          <h5 id="message">Du kan endast ha sex nummer</h5>
-        )}
-          <input placeholder="Ange din kod" value={inputfield} />
+          <CSSTransition
+            in={inputMessage}
+            timeout={200}
+            classNames="message"
+            onEntered={() => console.log("hej")}
+          >
+            <h5 className="message">
+              Du kan endast trycka in en sex siffrig kod
+            </h5>
+          </CSSTransition>
+          <input
+            placeholder="Ange din kod"
+            type={showInput ? "value" : "password"}
+            value={inputfield}
+            disabled={true}
+          />
+
+          {inputfield.length > 0 && (
+            <img src={showInput?view:hide} id="show"
+              onClick={() => this.setState({ showInput: !showInput })}
+            />
+          )}
         </div>
         <ul>
           {currentNumbers.map((item, i) => (
@@ -81,10 +165,7 @@ class Keypad extends Component {
                     inputfield: inputfield + item
                   });
                 }
-                if (inputfield.length === 6) {
-                  this.setState({ inputMessage: true });
-                  window.setTimeout(()=>this.setState({inputMessage:false}),3000)
-                }
+                this.setErrorMessage(inputfield.length);
               }}
             >
               {item}
@@ -94,26 +175,26 @@ class Keypad extends Component {
 
         <div className="flex-flow button-container">
           <button
+            style={{
+              backgroundColor: inputfield.length > 0 ? "#429781" : "#76C2B7"
+            }}
             onClick={() => {
-              if (inputfield.length > 0) {
-                this.setState({ loggedIn: true, focus: null });
-                window.setTimeout(
-                  () => this.setState({ loggedIn: false, inputfield: "" }),
-                  3000
-                );
-              }
+              this.login();
             }}
           >
             Logga in
           </button>
           <button
-            onClick={() =>{ 
-            const newInputValue=inputfield.length -1;
+            style={{
+              backgroundColor: inputfield.length === 0 ? "#F2B6B6" : "#F57E7E"
+            }}
+            onClick={() => {
+              const newInputValue = inputfield.length - 1;
               this.setState({
                 inputfield: inputfield.substring(0, inputfield.length - 1),
                 focus: null,
-                inputMessage:newInputValue<6 ? false:true
-              })
+                inputMessage: newInputValue < 6 ? false : true
+              });
             }}
           >
             X
