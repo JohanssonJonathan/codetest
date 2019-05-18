@@ -87,7 +87,7 @@ class Keypad extends Component {
       showPassword: false
     }));
   };
-  
+
   keyPress = e => {
     const { inputfield, currentNumbers } = this.state;
     if (e.key === "Enter") {
@@ -124,6 +124,7 @@ class Keypad extends Component {
       errorMessage,
       showPassword
     } = this.state;
+
 
     return (
       <div className="keypad-container">
@@ -174,6 +175,8 @@ class Keypad extends Component {
             });
           }}
         />
+
+        <button className="choice-button return" onClick={()=>this.props.toggleView("keypad")}>Return</button>
       </div>
     );
   }

@@ -1,14 +1,18 @@
 import React, { Component } from "react";
-import Keypad from "./components/keypad/Keypad"
-import Design from "./Design"
+import Keypad from "./components/keypad/Keypad";
+import Design from "./Design";
 import "./App.css";
-
-
 
 class App extends Component {
   state = {
     keypad: false,
     design: false
+  };
+
+  toggleView = value => {
+    this.setState({
+      [value]: false
+    });
   };
 
   render() {
@@ -35,8 +39,8 @@ class App extends Component {
           </div>
         )}
 
-        {keypad && <Keypad />}
-        {design && <Design />}
+        {keypad && <Keypad toggleView={this.toggleView} />}
+        {design && <Design toggleView={this.toggleView} />}
       </>
     );
   }
