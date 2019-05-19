@@ -89,9 +89,9 @@ const WorkOportunities = () => {
         header="Utvecklas hos oss"
         link="SÖK JOBB PÅ KNOWIT"
       >
-        Våra medarbetare ger Knowit högsta betyg som arbetsplats och
-        rekommenderar oss gärna för vänner och bekanta. Här berättar några
-        kollegor om hur det är att arbeta hos oss.
+        Knowit är ett företag där kreativitet och innovation står i fokus. Hos
+        oss har du alla möjligheter att utvecklas och växa som person samtidigt
+        som du är del av ett stöttande team.
       </WorkInfo>
     </div>
   );
