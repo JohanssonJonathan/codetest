@@ -6,8 +6,8 @@ import teamworkImage from "../../img/knowit-karriarmojligheter-3.jpg";
 import employeImage from "../../img/knowit-karriarmojligheter-1.jpg";
 import iconMenu from "../../img/icon-menu.svg";
 
-const Design = () => (
-  <div className="flex-row">
+const MainContainer = () => {
+  return (
     <div className="main-container">
       <div className="logo-with-menu-container">
         <img src={knowitLogo} alt="knowit" />
@@ -26,75 +26,80 @@ const Design = () => (
         </ul>
       </div>
     </div>
-    <div className="below-container">
-      <div className="slogan-container">
-        <h1>STARTING A NEW JOURNEY!</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
-          et magnis dis parturient montes, nascetur ridiculus mus. Donec quam
-          felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-          consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-          nec, vulputate eget, arcu.
-        </p>
-      </div>
-      <div>
-        <div className="image-container">
-          <div>
-            <img src={lakeImage} alt="lake" />
-          </div>
-          <div>
-            <h2>Förbättra världen</h2>
-            <p>
-              Vill du jobba för ett hållbart och mänskligt samhälle genom
-              digitalisering och innovation? Hos oss driver du förändring och är
-              med och formar framtiden med den senaste tekniken.
-            </p>
-            <div className="carrear-underline">
-              <h4>TA NÄSTA STEG I DIN KARRIÄR</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div className="image-container">
-          <div>
-            <img src={teamworkImage} alt="teamwork" />
-          </div>
-          <div>
-            <h2>Vi trivs på jobbet!</h2>
-            <p>
-              Våra medarbetare ger Knowit högsta betyg som arbetsplats och
-              rekommenderar oss gärna för vänner och bekanta. Här berättar några
-              kollegor om hur det är att arbeta hos oss.
-            </p>
-            <div className="carrear-underline">
+  );
+};
 
-            <h4>TRÄFFA VÅRA MEDARBETARE</h4>
-            </div>
-          </div>
-        </div>
+const SloganAndIntroduction = () => {
+  return (
+    <div className="slogan-container">
+      <h1>STARTING A NEW JOURNEY!</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+        ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+        dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+        ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+        arcu.
+      </p>
+    </div>
+  );
+};
+
+const WorkInfo = ({ image, header, children, link }) => (
+  <div>
+    <div className="image-container">
+      <div>
+        <img src={image} alt="img" />
       </div>
       <div>
-        <div className="image-container">
-          <div>
-            <img src={employeImage} alt="employe" />
-          </div>
-          <div>
-            <h2>Utvecklas hos oss</h2>
-            <p>
-              Knowit är ett företag där kreativitet och innovation står i fokus.
-              Hos oss har du alla möjligheter att utvecklas och växa som person
-              samtidigt som du är del av ett stöttande team.
-            </p>
-            <div className="carrear-underline">
-
-            <h4>SÖK JOBB PÅ KNOWIT</h4>
-            </div>
-          </div>
+        <h2>{header}</h2>
+        <p>{children}</p>
+        <div className="career-underline">
+          <h4>{link}</h4>
         </div>
       </div>
     </div>
+  </div>
+);
+const WorkOportunities = () => {
+  return (
+    <div className="below-container">
+      <SloganAndIntroduction />
+      <WorkInfo
+        header="Förbättra världen"
+        link="TA NÄSTA STEG I DIN KARRIÄR"
+        image={lakeImage}
+      >
+        Vill du jobba för ett hållbart och mänskligt samhälle genom
+        digitalisering och innovation? Hos oss driver du förändring och är med
+        och formar framtiden med den senaste tekniken.
+      </WorkInfo>
+
+      <WorkInfo
+        image={teamworkImage}
+        header="Vi trivs på jobbet!"
+        link="TRÄFFA VÅRA MEDARBETARE"
+      >
+        Våra medarbetare ger Knowit högsta betyg som arbetsplats och
+        rekommenderar oss gärna för vänner och bekanta. Här berättar några
+        kollegor om hur det är att arbeta hos oss.
+      </WorkInfo>
+      <WorkInfo
+        image={employeImage}
+        header="Utvecklas hos oss"
+        link="SÖK JOBB PÅ KNOWIT"
+      >
+        Våra medarbetare ger Knowit högsta betyg som arbetsplats och
+        rekommenderar oss gärna för vänner och bekanta. Här berättar några
+        kollegor om hur det är att arbeta hos oss.
+      </WorkInfo>
+    </div>
+  );
+};
+const Design = () => (
+  <div className="flex-row">
+    <MainContainer />
+    <WorkOportunities />
   </div>
 );
 

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 .main-container {
   width: 100%;
-  height:200px;
+  height: 200px;
   background-image: url("../../img/start_201811.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -69,14 +69,13 @@
 .slogan-container {
   width: 100%;
   color: black;
-  padding: 20px;
+  padding: 10px;
 }
 
 .slogan-container h1 {
   font-size: 22px;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  letter-spacing: 5px;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -87,9 +86,6 @@
   text-align: center;
   line-height: 30px;
 }
-/* .main-container li:first-child{
-    margin-left:0;
-} */
 
 .below-container {
   background-color: white;
@@ -102,8 +98,7 @@
 }
 
 .below-container > div {
-    margin-top: 35px;
-
+  margin-top: 35px;
 }
 
 .below-container > div:nth-child(2) {
@@ -123,47 +118,42 @@
   overflow: hidden;
   width: 300px;
   font-size: 20px;
-  text-align: left
-
+  text-align: left;
 }
-.image-container > div:last-child{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding-left:25px;
-    padding-right: 25px;
+.image-container > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
 }
-.image-container > div:last-child p{
-    font-size: 14px;
-    margin-top:10px;
+.image-container > div:last-child p {
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.image-container h4{
-    text-align: left;
-    margin:0;
-    font-size: 17px;
-    text-decoration: none;
-    color:black;
-
-
+.image-container h4 {
+  text-align: left;
+  margin: 0;
+  font-size: 17px;
+  text-decoration: none;
+  color: black;
 }
-.carrear-underline{
-    width: fit-content; 
-    margin-bottom: 20px;
-    border-bottom:2px solid white;
+.career-underline {
+  width: fit-content;
+  margin-bottom: 20px;
+  border-bottom: 2px solid white;
 }
 
 .image-container h2 {
-    text-align: left;
-    margin:0;
-    font-size: 24px;
+  text-align: left;
+  margin: 0;
+  font-size: 24px;
 }
 
 .below-container > div img {
-    width: 300px;
+  width: 300px;
 }
-
-
 
 @media screen and (min-width: 370px) {
   .main-container {
@@ -180,18 +170,28 @@
     overflow: hidden;
     width: 400px;
     font-size: 20px;
-    text-align: left
-  
+    text-align: left;
   }
   .below-container > div img {
     width: 400px;
-}
-
+  }
 }
 
 @media screen and (min-width: 510px) {
   .main-container {
     height: 300px;
+  }
+  .slogan-container {
+    padding: 20px;
+  }
+
+  .slogan-container h1 {
+    font-size: 22px;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 5px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 }
 
@@ -201,38 +201,32 @@
   }
   .below-container > div {
     margin-left: 20px;
-}
+  }
 }
 
 @media screen and (min-width: 880px) {
-  
   .main-container {
     height: 440px;
   }
- 
-  .below-container{
-      padding-top:20px;
-      
+
+  .below-container {
+    padding-top: 20px;
   }
-  
+
   .image-container h2 {
-    
     text-align: left;
-    margin:0;
+    margin: 0;
     font-size: 20px;
-}
- 
-.image-container > div:last-child{
-   padding-top:20px;
-}
+  }
 
+  .image-container > div:last-child {
+    padding-top: 20px;
+  }
 
-.image-container h4{
-    margin-top:20px;
+  .image-container h4 {
+    margin-top: 20px;
     font-size: 15px;
-
-
-}
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -250,17 +244,6 @@
     letter-spacing: 10px;
     margin-bottom: 10px;
   }
-  /* .slogan-container {
-    position: absolute;
-    top: -300px;
-    color: white;
-    width: 80%;
-  }
-  .slogan-container h1 {
-    font-size: 35px;
-    letter-spacing: 10px;
-    margin-bottom: 10px;
-  } */
 
   .logo-with-menu-container > img {
     position: relative;
@@ -268,18 +251,16 @@
     top: 43px;
     width: 141px;
   }
-
-
 }
 
-@media screen and (min-width:1100px){
-    .main-container ul {
-        display: flex;
-      }
-    
-      #icon-menu {
-        display: none;
-      }
+@media screen and (min-width: 1100px) {
+  .main-container ul {
+    display: flex;
+  }
+
+  #icon-menu {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -289,7 +270,6 @@
   .slogan-container {
     top: -350px;
   }
- 
 }
 
 @media screen and (min-width: 1366px) {
