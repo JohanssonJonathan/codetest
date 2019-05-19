@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Keypad from "./components/keypad/Keypad";
-import Design from "./Design";
+import Design from "./components/design/Design";
 import "./App.css";
 
 class App extends Component {
