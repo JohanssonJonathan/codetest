@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
 .main-container {
   width: 100%;
+  height:200px;
   background-image: url("../../img/start_201811.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -120,7 +121,7 @@
 
 .image-container {
   overflow: hidden;
-  width: 400px;
+  width: 300px;
   font-size: 20px;
   text-align: left
 
@@ -159,17 +160,10 @@
 }
 
 .below-container > div img {
-    width: 400px;
+    width: 300px;
 }
 
 
-
-/* #employe img{
-  position: relative;
-  top: -13px;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%);
-  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%);
-} */
 
 @media screen and (min-width: 370px) {
   .main-container {
@@ -181,6 +175,18 @@
   .main-container {
     height: 240px;
   }
+
+  .image-container {
+    overflow: hidden;
+    width: 400px;
+    font-size: 20px;
+    text-align: left
+  
+  }
+  .below-container > div img {
+    width: 400px;
+}
+
 }
 
 @media screen and (min-width: 510px) {
