@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+.main-container {
+  width: 100%;
+  background-image: url("../../img/start_201811.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.logo-with-menu-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo-with-menu-container > img {
+  position: relative;
+  left: 2.75rem;
+  top: 43px;
+  width: 100px;
+}
+
+#icon-menu {
+  position: relative;
+  top: 43px;
+
+  right: 2.75rem;
+}
+#icon-menu > img {
+  width: 33px;
+}
+.main-container ul {
+  position: relative;
+  display: flex;
+  right: 8.75rem;
+  top: 43px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.main-container li {
+  margin-left: 2.81rem;
+  color: white;
+  font-size: 20px;
+  text-shadow: 0px 2px 4px black;
+  position: relative;
+  cursor: pointer;
+}
+
+.main-container li > div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  right: -15px;
+  top: -5px;
+  background-color: #f57e7e;
+  font-size: 11px;
+}
+
+.slogan-container {
+  width: 100%;
+  color: black;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.slogan-container h1 {
+  font-size: 22px;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.slogan-container p {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+}
+/* .main-container li:first-child{
+    margin-left:0;
+} */
+
+.below-container {
+  background-color: white;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 58px;
+  flex-wrap: wrap;
+}
+
+.below-container > div {
+  /* margin-left: 16px; */
+}
+
+.below-container > div:nth-child(2) {
+  margin-left: 0;
+  background-color: #f3e9e2;
+}
+
+.below-container > div:nth-child(3) {
+  background-color: #d6e1ec;
+}
+
+.below-container > div:last-child {
+  background-color: #dee1ec;
+}
+
+.image-container {
+  overflow: hidden;
+  width: 400px;
+
+}
+
+.below-container > div img {
+    width: 400px;
+
+}
+
+#employe{
+    position: relative;
+}
+#employe img {
+    position: absolute;
+    top:-13px;
+}
+/* #employe img{
+  position: relative;
+  top: -13px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%);
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 95%);
+} */
+
+@media screen and (min-width: 370px) {
+  .main-container {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .main-container {
+    height: 240px;
+  }
+}
+
+@media screen and (min-width: 510px) {
+  .main-container {
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .main-container {
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  .main-container {
+    height: 440px;
+  }
+  .slogan-container {
+    position: absolute;
+    top: -300px;
+    color: white;
+    width: 75%;
+  }
+  .slogan-container h1 {
+    font-size: 35px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+  }
+  
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    height: 530px;
+  }
+  /* .slogan-container {
+    position: absolute;
+    top: -300px;
+    color: white;
+    width: 80%;
+  }
+  .slogan-container h1 {
+    font-size: 35px;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+  } */
+
+  .logo-with-menu-container > img {
+    position: relative;
+    left: 8.75rem;
+    top: 43px;
+    width: 141px;
+  }
+
+
+}
+
+@media screen and (min-width:1100px){
+    .main-container ul {
+        display: flex;
+      }
+    
+      #icon-menu {
+        display: none;
+      }
+}
+
+@media screen and (min-width: 1280px) {
+  .main-container {
+    height: 640px;
+  }
+  .slogan-container {
+    top: -350px;
+  }
+ 
+}
+
+@media screen and (min-width: 1366px) {
+  .main-container {
+    height: 700px;
+  }
+  .slogan-container {
+    top: -400px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main-container {
+    height: 740px;
+  }
+  .slogan-container {
+    top: -450px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .main-container {
+    height: 800px;
+  }
+
+  .slogan-container {
+    top: -500px;
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .main-container {
+    height: 840px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .main-container {
+    height: 1000px;
+  }
+  .slogan-container {
+    top: -600px;
+  }
+}
