@@ -6,11 +6,11 @@ import "../../css/keypad/Keypad.css";
 
 const Numbers = ({ currentNumbers, focus, onMouseEnterLeave, onClick }) => {
     return (
-      <ul>
+      <ul className="numbers-container">
         {currentNumbers.map((nr, i) => (
           <li
             key={i}
-            className={nr === null ? "empty" : ""}
+            className={nr === null ? "li-container empty " : "li-container"}
             id={(focus === i && nr !== null) ? "focus" :""}
             onMouseEnter={() => {
               onMouseEnterLeave(nr, i);

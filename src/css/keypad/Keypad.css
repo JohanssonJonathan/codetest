@@ -63,7 +63,7 @@ input{
 
 }
 
-ul{
+ul.numbers-container{
     padding:0;
     list-style: none;
     display: flex;
@@ -75,9 +75,8 @@ ul{
 
 }
 
-li{
+.li-container{
     box-sizing: border-box;
-
     display: block;
     text-align: center;
     width:25%;
