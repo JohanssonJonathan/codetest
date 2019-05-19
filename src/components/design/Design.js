@@ -51,7 +51,9 @@ const Design = () => (
               digitalisering och innovation? Hos oss driver du förändring och är
               med och formar framtiden med den senaste tekniken.
             </p>
-            <h4>TA NÄSTA STEG I DIN KARRIÄR</h4>
+            <div className="carrear-underline">
+              <h4>TA NÄSTA STEG I DIN KARRIÄR</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -67,13 +69,16 @@ const Design = () => (
               rekommenderar oss gärna för vänner och bekanta. Här berättar några
               kollegor om hur det är att arbeta hos oss.
             </p>
+            <div className="carrear-underline">
+
             <h4>TRÄFFA VÅRA MEDARBETARE</h4>
+            </div>
           </div>
         </div>
       </div>
       <div>
         <div className="image-container">
-          <div id="employe">
+          <div>
             <img src={employeImage} alt="employe" />
           </div>
           <div>
@@ -83,8 +88,10 @@ const Design = () => (
               Hos oss har du alla möjligheter att utvecklas och växa som person
               samtidigt som du är del av ett stöttande team.
             </p>
+            <div className="carrear-underline">
 
             <h4>SÖK JOBB PÅ KNOWIT</h4>
+            </div>
           </div>
         </div>
       </div>

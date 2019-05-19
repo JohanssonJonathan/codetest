@@ -69,7 +69,6 @@
   width: 100%;
   color: black;
   padding: 20px;
-  padding-bottom: 0;
 }
 
 .slogan-container h1 {
@@ -102,7 +101,8 @@
 }
 
 .below-container > div {
-  /* margin-left: 16px; */
+    margin-top: 35px;
+
 }
 
 .below-container > div:nth-child(2) {
@@ -121,21 +121,49 @@
 .image-container {
   overflow: hidden;
   width: 400px;
+  font-size: 20px;
+  text-align: left
 
+}
+.image-container > div:last-child{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left:25px;
+    padding-right: 25px;
+}
+.image-container > div:last-child p{
+    font-size: 14px;
+    margin-top:10px;
+}
+
+.image-container h4{
+    text-align: left;
+    margin:0;
+    font-size: 17px;
+    text-decoration: none;
+    color:black;
+
+
+}
+.carrear-underline{
+    width: fit-content; 
+    margin-bottom: 20px;
+    border-bottom:2px solid white;
+}
+
+.image-container h2 {
+    text-align: left;
+    margin:0;
+    font-size: 24px;
 }
 
 .below-container > div img {
     width: 400px;
-
 }
 
-#employe{
-    position: relative;
-}
-#employe img {
-    position: absolute;
-    top:-13px;
-}
+
+
 /* #employe img{
   position: relative;
   top: -13px;
@@ -165,11 +193,45 @@
   .main-container {
     height: 350px;
   }
+  .below-container > div {
+    margin-left: 20px;
+}
 }
 
 @media screen and (min-width: 880px) {
+  
   .main-container {
     height: 440px;
+  }
+ 
+  .below-container{
+      padding-top:20px;
+      
+  }
+  
+  .image-container h2 {
+    
+    text-align: left;
+    margin:0;
+    font-size: 20px;
+}
+ 
+.image-container > div:last-child{
+   padding-top:20px;
+}
+
+
+.image-container h4{
+    margin-top:20px;
+    font-size: 15px;
+
+
+}
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    height: 530px;
   }
   .slogan-container {
     position: absolute;
@@ -181,13 +243,6 @@
     font-size: 35px;
     letter-spacing: 10px;
     margin-bottom: 10px;
-  }
-  
-}
-
-@media screen and (min-width: 1024px) {
-  .main-container {
-    height: 530px;
   }
   /* .slogan-container {
     position: absolute;
