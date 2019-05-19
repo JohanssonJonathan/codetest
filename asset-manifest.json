@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/codetest/static/css/main.9722ce95.chunk.css",
+    "main.js": "/codetest/static/js/main.a2fa96a7.chunk.js",
+    "main.js.map": "/codetest/static/js/main.a2fa96a7.chunk.js.map",
+    "runtime~main.js": "/codetest/static/js/runtime~main.fd7931c7.js",
+    "runtime~main.js.map": "/codetest/static/js/runtime~main.fd7931c7.js.map",
+    "static/js/2.cec17d66.chunk.js": "/codetest/static/js/2.cec17d66.chunk.js",
+    "static/js/2.cec17d66.chunk.js.map": "/codetest/static/js/2.cec17d66.chunk.js.map",
+    "index.html": "/codetest/index.html",
+    "precache-manifest.652c08345e6c88e879be64517a898ee4.js": "/codetest/precache-manifest.652c08345e6c88e879be64517a898ee4.js",
+    "service-worker.js": "/codetest/service-worker.js",
+    "static/css/main.9722ce95.chunk.css.map": "/codetest/static/css/main.9722ce95.chunk.css.map",
+    "static/media/icon-menu.svg": "/codetest/static/media/icon-menu.5637db38.svg",
+    "static/media/knowit-karriarmojligheter-1.jpg": "/codetest/static/media/knowit-karriarmojligheter-1.ec0c5dc0.jpg",
+    "static/media/knowit-karriarmojligheter-2.jpg": "/codetest/static/media/knowit-karriarmojligheter-2.05987f6e.jpg",
+    "static/media/knowit-karriarmojligheter-3.jpg": "/codetest/static/media/knowit-karriarmojligheter-3.04b00462.jpg",
+    "static/media/knowit_white.svg": "/codetest/static/media/knowit_white.8c98ed3f.svg",
+    "static/media/passwordHidden.png": "/codetest/static/media/passwordHidden.da3f3455.png",
+    "static/media/passwordVisible.png": "/codetest/static/media/passwordVisible.e9135840.png",
+    "static/media/design.css": "/codetest/static/media/start_201811.c36ed1ed.jpg"
+  }
+}
