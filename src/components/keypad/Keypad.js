@@ -145,6 +145,7 @@ class Keypad extends Component {
             src={showPassword ?  passwordVisible:passwordHidden}
             id="show"
             onClick={() => this.setState({ showPassword: !showPassword })}
+            alt="eye"
           />
         </InputFieldContainer>
 
