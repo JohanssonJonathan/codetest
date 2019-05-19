@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "../../css/design/design.css";
 import knowitLogo from "../../img/knowit_white.svg";
 import lakeImage from "../../img/knowit-karriarmojligheter-2.jpg";
 import teamworkImage from "../../img/knowit-karriarmojligheter-3.jpg";
 import employeImage from "../../img/knowit-karriarmojligheter-1.jpg";
 import iconMenu from "../../img/icon-menu.svg";
-import background from "../../img/start_201811.jpg";
 
 const Design = () => (
   <div className="flex-row">
