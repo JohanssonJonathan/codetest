@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/codetest/static/css/main.9722ce95.chunk.css",
+    "main.css": "/codetest/static/css/main.55ef9d02.chunk.css",
     "main.js": "/codetest/static/js/main.8976913c.chunk.js",
     "main.js.map": "/codetest/static/js/main.8976913c.chunk.js.map",
     "runtime~main.js": "/codetest/static/js/runtime~main.fd7931c7.js",
@@ -8,9 +8,9 @@
     "static/js/2.cec17d66.chunk.js": "/codetest/static/js/2.cec17d66.chunk.js",
     "static/js/2.cec17d66.chunk.js.map": "/codetest/static/js/2.cec17d66.chunk.js.map",
     "index.html": "/codetest/index.html",
-    "precache-manifest.0e2748b3ccb295f93a59f4e4087f2ca2.js": "/codetest/precache-manifest.0e2748b3ccb295f93a59f4e4087f2ca2.js",
+    "precache-manifest.80b4e6930ffc26b9226eccfff64855f3.js": "/codetest/precache-manifest.80b4e6930ffc26b9226eccfff64855f3.js",
     "service-worker.js": "/codetest/service-worker.js",
-    "static/css/main.9722ce95.chunk.css.map": "/codetest/static/css/main.9722ce95.chunk.css.map",
+    "static/css/main.55ef9d02.chunk.css.map": "/codetest/static/css/main.55ef9d02.chunk.css.map",
     "static/media/icon-menu.svg": "/codetest/static/media/icon-menu.5637db38.svg",
     "static/media/knowit-karriarmojligheter-1.jpg": "/codetest/static/media/knowit-karriarmojligheter-1.ec0c5dc0.jpg",
     "static/media/knowit-karriarmojligheter-2.jpg": "/codetest/static/media/knowit-karriarmojligheter-2.05987f6e.jpg",
