@@ -73,16 +73,18 @@ ul.numbers-container{
     flex-wrap: wrap;
     font-family: 'Open Sans', sans-serif;
     box-sizing:border-box;
-
+    
 }
 
 .li-container{
     box-sizing: border-box;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     width:25%;
     border:3px solid #EFEFEF;
-    padding:5px 0px;
+    height:47px;
     border-radius: 7px;
     background-color:rgba(255, 255, 255, 1);
     cursor: pointer;
